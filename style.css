@@ -1,0 +1,101 @@
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background: #FFD8C8; /* Soft peach default background */
+}
+
+/* HOME PAGE BACKGROUND */
+.home {
+    background: url('backgrnd.png') no-repeat center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ADMIN PAGE BACKGROUND */
+.admin-page {
+    background: url('adminbckgrn.png') no-repeat center/cover;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* BLOG PAGE BACKGROUND */
+.blog-page {
+    background: url('blogbackgrnd.png') no-repeat center/cover;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* DEFAULT PINK THEME PAGES */
+.pink-page {
+    background: #FFE6EE; /* Light pink */
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* OVERLAY */
+.overlay {
+    background: rgba(13, 9, 9, 0.55);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 80%;
+    max-width: 550px;
+}
+
+/* MAIN TITLE */
+.title {
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.btn {
+    display: block;
+    padding: 15px;
+    margin: 12px auto;
+    background: #e82c48;      /* soft vibrant pink */
+    width: 70%;
+    font-size: 20px;
+    text-decoration: none;
+    color: #f8f3f3;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #FF8FA1;
+    transform: scale(1.08);
+}
+
+/* CARDS */
+.card {
+    background: #FFFFFF;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(255, 107, 129, 0.3);
+}
+
+.admin-login-bg {
+    background: url('/assets/adminloginbckgrnd.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-bg {
+    background: url('/assets/backgrnd1.jpeg') no-repeat center center/cover;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

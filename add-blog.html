@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>Add Blog</title>
+
+<link rel='stylesheet' href='style.css'>
+<script src='script.js'></script>
+
+<style>
+/* Page background image */
+body {
+    background: url('addblogbg.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Card styling (optional, keeps content readable) */
+.card {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    max-width: 450px;
+    margin: 60px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #0004;
+}
+
+.btn::placeholder {
+    color: yellow;
+}
+</style>
+</head>
+
+<body>
+
+<div class='card'>
+    <h2>Add New Blog</h2>
+
+    <input id='title' class='btn' placeholder='Enter Heading'>
+
+    <textarea id='content' style='width:100%;height:150px;' placeholder='Write your blog here'></textarea>
+
+    <button class='btn' onclick='add()'>Add Blog</button>
+</div>
+
+<script>
+function add(){
+    saveBlog({title:title.value, content:content.value});
+    alert("Blog Added!");
+    location.href="blogs.html";
+}
+</script>
+
+</body>
+</html>

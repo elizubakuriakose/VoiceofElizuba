@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>Admin Login</title>
+<link rel='stylesheet' href='style.css'>
+</head>
+
+<body class="admin-login-bg">
+
+<div class='overlay'>
+    <h2 style="color: white;">Admin Login</h2>
+
+    <input id='user' class='loginbtn' placeholder='Username'>
+    <input id='pass' class='loginbtn' placeholder='Password' type='password'>
+    <button class='btn loginbtn2' onclick='login()'>Login</button>
+</div>
+
+<style>
+.loginbtn {
+    display: block;
+    padding: 15px;
+    margin: 12px auto;
+    background: #e82c48;   /* your pink */
+    width: 70%;
+    font-size: 20px;
+    text-decoration: none;
+    color: #f8f3f3;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+    text-align: center;
+
+    /* ⭐ Remove any borders/outlines */
+    border: none;
+    outline: none;
+}
+
+/* Same for the login button */
+.loginbtn2 {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Placeholder text color */
+.loginbtn::placeholder {
+    color: yellow;
+}
+
+/* Background image */
+.admin-login-bg {
+    background: url('adminlogbg.png') no-repeat center center fixed;
+    background-size: cover;
+}
+</style>
+
+<script>
+function login(){
+    if(user.value==="Elishuba" && pass.value==="Elizabeth")
+        location.href="admin-dashboard.html";
+    else 
+        alert("Incorrect login!");
+}
+</script>
+
+</body>
+</html>

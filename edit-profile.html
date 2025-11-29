@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>Edit Profile</title>
+
+<link rel='stylesheet' href='style.css'>
+<script src='script.js'></script>
+
+<style>
+/* Background image */
+body {
+    background: url('editbg.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Card styling for readability */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    max-width: 450px;
+    margin: 60px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #0003;
+}
+
+/* Optional: placeholder color */
+.btn::placeholder {
+    color: yellow;
+}
+</style>
+
+</head>
+<body>
+
+<div class='card'>
+    <h2>Edit Profile</h2>
+
+    <input id='name' class='btn' placeholder='Name'>
+    <textarea id='about' style='width:100%;height:100px;' placeholder='About you'></textarea>
+    <input id='email' class='btn' placeholder='Email'>
+
+    <button class='btn' onclick='save()'>Save Changes</button>
+</div>
+
+<script>
+let p = getProfile();
+name.value = p.name;
+about.value = p.about;
+email.value = p.email;
+
+function save() {
+    saveProfile({ name: name.value, about: about.value, email: email.value });
+    alert("Profile Updated!");
+    location.href = "profile.html";
+}
+</script>
+
+</body>
+</html>

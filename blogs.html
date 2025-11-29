@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>Blogs</title>
+
+<!-- CSS -->
+<link rel='stylesheet' href='style.css'>
+<script src='script.js'></script>
+
+<style>
+/* FULL-PAGE BLOG BACKGROUND */
+body {
+    margin: 0;
+    background: url('blogbackgrnd.png') no-repeat center center/cover;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+</style>
+
+</head>
+
+<body>
+<h2 style='text-align:center; color: #ffffff; font-family: Lovely May Script ,  cursive;font-size: 50px;'>Blogs</h2>
+
+<div id='blog-list'></div>
+
+<script>
+const blogs = getBlogs(),
+      c = document.getElementById("blog-list");
+
+if (!blogs.length)
+    c.innerHTML = "<p style='text-align:center;'>No blogs yet.</p>";
+
+blogs.forEach((b, i) => {
+    c.innerHTML += `
+        <div class='card'>
+            <h3>${b.title}</h3>
+            <a class='btn' href="blog-view.html?id=${i}">Read Blog</a>
+        </div>`;
+});
+</script>
+
+</body>
+</html>

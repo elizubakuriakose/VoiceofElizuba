@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>Profile</title>
+<link rel='stylesheet' href='style.css'>
+<script src='script.js'></script>
+
+<style>
+/* Background image for profile page */
+body.profile-bg {
+    background: url('profilebg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Optional card styling if you want clearer text */
+.card {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    max-width: 500px;
+    margin: 70px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #0003;
+}
+</style>
+
+</head>
+
+<body class="profile-bg">
+
+<div class='card' id='profile'></div>
+
+<script>
+let p = getProfile();
+document.getElementById("profile").innerHTML = `
+    <h2>Elizuba Kuriakose</h2>
+    <p>${p.about}</p>
+    <p><b>Email:</b> ${p.email}</p>
+`;
+</script>
+
+</body>
+</html>

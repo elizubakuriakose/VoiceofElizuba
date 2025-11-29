@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>Comments</title>
+
+<link rel='stylesheet' href='style.css'>
+<script src='script.js'></script>
+
+<style>
+/* Full page background image */
+body {
+    background: url('cmntsbg.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Card styling */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #0003;
+}
+</style>
+
+</head>
+<body>
+
+<h2 style="text-align:center;color: rgb(40, 38, 32); font-family: Lucida Handwriting , Brush Script MT, cursive; font-size: 50px;">Comments</h2>
+
+<div id="comment-box"></div>
+
+<script>
+const c = getComments(),
+      box = document.getElementById("comment-box");
+
+c.forEach((x, i) => {
+    box.innerHTML += `
+        <div class='card'>
+            <h3>${x.blogTitle}</h3>
+            <p>${x.comment}</p>
+            <button class='btn' onclick='remove(${i})'>Delete</button>
+        </div>
+    `;
+});
+
+function remove(i){
+    deleteComment(i);
+    location.reload();
+}
+</script>
+
+</body>
+</html>
